@@ -2,3 +2,5 @@ AllCops:
   TargetRubyVersion: 3.2
 Metrics/MethodLength:
   Enabled: false
+Style/EmptyCaseCondition:
+  Enabled: false
