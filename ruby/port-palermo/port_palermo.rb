@@ -1,11 +1,13 @@
 module Port
-  # TODO: define the 'IDENTIFIER' constant
+  IDENTIFIER = :PALE
 
   def self.get_identifier(city)
-    raise 'Please implement the Port.get_identifier method'
+    city[..3].upcase.to_sym
   end
 
   def self.get_terminal(ship_identifier)
-    raise 'Please implement the Port.get_terminal method'
+    cargo_type = ship_identifier.to_s[..2]
+
+    %w[OIL GAS].include?(cargo_type) ? :A : :B
   end
 end
